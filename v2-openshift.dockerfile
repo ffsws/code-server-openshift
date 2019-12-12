@@ -50,7 +50,7 @@ RUN mkdir -p projects && mkdir -p certs && \
 
 COPY entrypoint /home/coder
 
-VOLUME ["/home/coder/projects", "/home/coder/certs"];
+VOLUME ["/home/coder/projects"];
 
 USER 10001
 
