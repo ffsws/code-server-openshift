@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-ENV LANG=en_US.UTF-8 \
+ENV LANG=de_DE.UTF-8 \
     # adding a sane default is needed since we're not erroring out via exec.
      CODER_PASSWORD="coder" \
      SHELL=/bin/bash
@@ -20,7 +20,7 @@ RUN apt-get update && \
       curl \
       dumb-init \
       wget && \
-    locale-gen en_US.UTF-8 && \
+    locale-gen de_DE.UTF-8 && \
     apt clean && \
     rm -rf /var/lib/apt/lists/* && \
     cd /tmp && \
