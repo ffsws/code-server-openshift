@@ -13,6 +13,7 @@ COPY exec-v2 /opt/exec
 RUN apt-get update && \
     apt-get install -y  \
       sudo \
+      apt-utils \
       openssl \
       net-tools \
       git \
