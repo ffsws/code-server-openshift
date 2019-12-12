@@ -6,7 +6,7 @@ ENV LANG=de_DE.UTF-8 \
      SHELL=/bin/bash
 
 #Change this via --arg in Docker CLI
-ARG CODER_VERSION=2.1523-vsc1.38.1
+ARG CODER_VERSION=2.1692-vsc1.39.2
 
 COPY exec-v2 /opt/exec
 
