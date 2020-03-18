@@ -25,7 +25,7 @@ RUN apt-get update && \
     apt clean && \
     rm -rf /var/lib/apt/lists/* && \
     cd /tmp && \
-    wget -O - https://github.com/codercom/code-server/releases/download/${CODER_VERSION}/code-server${CODER_VERSION}-linux-x86_64.tar.gz | tar -xzv && \
+    wget -O - https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-x86_64.tar.gz | tar -xzv && \
     chmod -R 755 code-server${CODER_VERSION}-linux-x86_64/code-server && \
     mv code-server${CODER_VERSION}-linux-x86_64/code-server /usr/bin/ && \
     rm -rf code-server-${CODER_VERSION}-linux-x86_64 && \
@@ -43,7 +43,7 @@ WORKDIR /home/coder
 USER coder
 
 RUN mkdir -p projects && mkdir -p certs && \
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash && \
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash && \
     sudo chmod -R g+rw projects/ && \
     sudo chmod -R g+rw certs/ && \
     sudo chmod -R g+rw .nvm;
